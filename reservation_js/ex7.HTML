@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex7</title>
+    <link rel="stylesheet" href="/ex7/ex7.css">
+</head>
+<body>
+    <div class="nv" id="nv">
+        <div class="barreend" style="background-color: rgb(28, 4, 85); margin-top: 0%;height: 30px;"> 
+            <img height="20px" onclick="close()" src="/cancel.png" alt="" style="margin-left: 98%;margin-top: 0.4% ; background-color: brown;" >
+        </div>
+
+        <div class="formulaire">
+
+            <div class="line0">
+                <label for="nom">nom</label>
+                <label for="nom">prenon</label>
+                <label for="type">type</label>
+                <label for="date de naissance">date de naissance</label>
+
+            </div>
+            
+            <div class="line1">
+                <input type="text"placeholder="nom">
+                <input type="text" placeholder="prenon">
+                <select name="type" id="type" onchange="typeF(this.value)" >
+                    <option value= "0" >choisi</option>
+                    <option value="24" id="INF">INF</option>
+                    <option value="80" id="CHD">CHD</option>
+                    <option value="100" id="Mr/Mrs">Mr/Mrs</option>
+                </select>
+                <input type="date" placeholder="date de nassance" id="DDN">
+            </div>
+
+            <div class="titre">
+                <h3 for="Assuranes">Assuranes</h3>
+            </div>
+
+            <div class="line2">
+                <div class="AS"> <input id="a" name="product" value="18.9" type="checkbox" onclick="totalIt(id)"/>  <p>  RAPARTIMENT 18.9$</p> </div>
+                <div class="AS"> <input id="b" name="product" value="29.95" type="checkbox" onclick="totalIt(id)"/>  <p>  Annulation 29.95$</p> </div>
+                <div class="AS"> <input id="c" name="product" value="15" type="checkbox" onclick="totalIt(id)"/>  <p>  Bagage 15$</p> </div>
+            </div>
+
+            <div class="ajout">
+                Total:<input type="text" value="0" id="total" placeholder="0$" class="Total">
+                <button id="Aj" onclick="ajout()" >Ajoute un pasager</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="ex7.js"></script>
+</body>
+</html>

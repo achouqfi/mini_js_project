@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex6</title>
+    <link rel="stylesheet" href="ex6.css">
+</head>
+<body>
+
+    <button class="addNew" onclick="newColone()">New</button>
+
+    <div class="tableau" id="tableInsert">
+        <table>
+            <tr class="colone">
+                <th id="nameT">name</th>
+                <th id="dateT">date</th>
+                <th id="coverT">cover</th>
+                <th class="action" id="actionT">action</th>
+            </tr><br>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="page2" id="popup">
+        <div class="titleclose">
+            <h1>Add book</h1>
+            <img height="20px" src="/cancel.png" alt="close-img" onclick="closeAdd()">
+        </div>
+        <div class="formulaire">
+            name :  <input id="inputName" type="text" >
+            date :  <input id="inputDate" type="date" >
+            cover : <input id="inputFile" onchange="insertimg()" type="file" class="fileAdd">
+        </div>
+        <button class="btn" onclick="insertion()">add</button>
+    </div>
+
+    <script src="ex6.js"></script>
+</body>
+</html> 
